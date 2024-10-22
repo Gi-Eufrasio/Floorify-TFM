@@ -1,0 +1,18 @@
+command_train  = [
+    "accelerate", "launch", "/home/data/giovan/testes/Dreambooth/Model/diffusers/examples/text_to_image/train_text_to_image.py",
+    "--pretrained_model_name_or_path", model_name,
+    "--train_data_dir", train_dir,
+    "--use_ema",
+    "--resolution", "512", "--center_crop", "--random_flip",
+    "--train_batch_size", "4",  # Aumenta el tamaño del batch si tienes suficiente memoria GPU
+    "--gradient_accumulation_steps", "2",  # Ajusta según la memoria GPU disponible
+    "--gradient_checkpointing",
+    "--mixed_precision", "fp16",
+    "--max_train_steps", "1500",
+    "--learning_rate", "1e-05",
+    "--max_grad_norm", "1",
+    "--lr_scheduler", "cosine",  # Cambia el scheduler a 'cosine' para mejor rendimiento
+    "--lr_warmup_steps", "500",  # Aumenta el número de warmup steps
+    "--output_dir", output_dir,
+    "--logging_dir", "output_log1"
+]
