@@ -20,3 +20,34 @@ The purpose of the research conducted for this work was to explore whether it wo
 
 For the model's creation, we used the Fine-Tuning technique on pre-trained Stable Diffusion models, leveraging the Diffusion model from the Hugging Face platform as the main foundation, along with the Dreambooth, LoRa, and Text_To_Image methods.
 
+## Imagenes de Demonstracion de Pruebas Generados:
+
+## Demonstration Test Images Generated:
+
+## Instalación y Métodos para Utilizar el Proyecto
+
+El proyecto almacenado en este repositorio fue generado a partir del lenguaje de programación Python, convirtiéndose en el requisito principal para cualquier persona que desee realizar pruebas y experimentos con el proyecto.
+En el archivo "xxx", una vez ejecutado dentro del entorno operativo con Python, se instalan automáticamente todas las bibliotecas utilizadas en el proyecto. Dejo el comando a continuación:
+
+XXXXXXXXXXXXXXXX
+
+Es necesario descargar la carpeta de algoritmos y modelos de Diffusion para realizar los fine-tunings si se desea. A continuación, dejo el comando y la carpeta de almacenamiento en el proyecto:
+
+XXXXXXXXXXXXXXXX
+
+Para ejecutar la generación de los principales modelos, siempre es necesario ejecutar el archivo XXX, que ejecuta una interfaz Gradio para realizar los experimentos. Dejo el comando a continuación:
+
+XXXXXXXXXXXXXXXX
+
+## Installation and Methods to Use the Project
+
+The project stored in this repository was developed using the Python programming language, making it the primary requirement for anyone wishing to conduct tests and experiments with the project.
+In the file "xxx," once executed within the Python environment, all libraries used in the project are automatically installed.
+
+It is necessary to download the folder containing the Diffusion algorithms and models to perform fine-tunings if desired. Below, I provide the command and the storage folder in the project:
+
+XXXXXXXXXXXXXXXX
+
+To generate the main models, it is always necessary to run the file XXX, which launches a Gradio interface to conduct the experiments. Below is the command:
+
+XXXXXXXXXXXXXXXX
