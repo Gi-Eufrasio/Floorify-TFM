@@ -69,3 +69,16 @@ To execute the generation of the main models, it is always necessary to run the 
 ```bash
    python interface_gradio.py
 ```
+
+## Citation
+
+```bibtex
+@misc{von-platen-etal-2022-diffusers,
+  author = {Giovane Eufrasio},
+  title = {Proyecto Floorify: Generación de Planos Arquitectónicos Mediante Inteligencia Artificial Generativa},
+  year = {2025},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/Gi-Eufrasio/Floorify-TFM}}
+}
+```
