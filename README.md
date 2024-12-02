@@ -76,7 +76,7 @@ To execute the generation of the main models, it is always necessary to run the 
 @misc{eufrasio-etal-2025-floorify,
   author = {Giovane Eufrasio},
   title = {Proyecto Floorify: Generación de Planos Arquitectónicos Mediante Inteligencia Artificial Generativa},
-  year = {2025},
+  year = {2024},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/Gi-Eufrasio/Floorify-TFM}}
