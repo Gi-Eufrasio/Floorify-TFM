@@ -37,19 +37,21 @@ For the model's creation, we used the Fine-Tuning technique on pre-trained Stabl
 El proyecto almacenado en este repositorio fue generado a partir del lenguaje de programación Python, convirtiéndose en el requisito principal para cualquier persona que desee realizar pruebas y experimentos con el proyecto.
 En el archivo "xxx", una vez ejecutado dentro del entorno operativo con Python, se instalan automáticamente todas las bibliotecas utilizadas en el proyecto. Dejo el comando a continuación:
 
-XXXXXXXXXXXXXXXX
-
 ```bash
    python interface_gradio.py
 ```
 
 Es necesario descargar la carpeta de algoritmos y modelos de Diffusion para realizar los fine-tunings si se desea. A continuación, dejo el comando y la carpeta de almacenamiento en el proyecto:
 
-XXXXXXXXXXXXXXXX
+```bash
+   python interface_gradio.py
+```
 
 Para ejecutar la generación de los principales modelos, siempre es necesario ejecutar el archivo XXX, que ejecuta una interfaz Gradio para realizar los experimentos, siempre y cuando ya exista un modelo ajustado en la carpeta. Dejo el comando a continuación:
 
-XXXXXXXXXXXXXXXX
+```bash
+   python interface_gradio.py
+```
 
 ## Installation and Methods to Use the Project
 
@@ -58,8 +60,12 @@ In the file "xxx," once executed within the Python environment, all libraries us
 
 It is necessary to download the folder containing the Diffusion algorithms and models to perform fine-tunings if desired. Below, I provide the command and the storage folder in the project:
 
-XXXXXXXXXXXXXXXX
+```bash
+   python interface_gradio.py
+```
 
 To execute the generation of the main models, it is always necessary to run the XXX file, which launches a Gradio interface to perform the experiments, as long as an adjusted model already exists in the folder. I leave the command below:
 
-XXXXXXXXXXXXXXXX
+```bash
+   python interface_gradio.py
+```
