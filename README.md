@@ -73,7 +73,7 @@ To execute the generation of the main models, it is always necessary to run the 
 ## Citation
 
 ```bibtex
-@misc{von-platen-etal-2022-diffusers,
+@misc{eufrasio-etal-2025-floorify,
   author = {Giovane Eufrasio},
   title = {Proyecto Floorify: Generación de Planos Arquitectónicos Mediante Inteligencia Artificial Generativa},
   year = {2025},
