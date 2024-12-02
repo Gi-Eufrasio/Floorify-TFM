@@ -22,6 +22,8 @@ For the model's creation, we used the Fine-Tuning technique on pre-trained Stabl
 
 ## Imagenes de Demonstracion de Pruebas Generados:
 
+!["Teste"](git_Img/Modelo2prompt2_TextToImage.png)
+
 ## Demonstration Test Images Generated:
 
 ## Instalación y Métodos para Utilizar el Proyecto
