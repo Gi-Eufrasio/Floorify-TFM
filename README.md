@@ -28,9 +28,9 @@ For the model's creation, we used the Fine-Tuning technique on pre-trained Stabl
 
 ## Demonstration Test Images Generated:
 
-!["Inference with the Text_to_Image Method"](git_Img/Modelo2prompt2_TextToImage.png)
+![Inference with the Text_to_Image Method](git_Img/Modelo2prompt2_TextToImage.png)
 
-!["Inference with the LoRas/Dreambooth Method"](git_Img/Pruebas_02_LoRas.png)
+![Inference with the LoRas/Dreambooth Method](git_Img/Pruebas_02_LoRas.png)
 
 ## Instalación y Métodos para Utilizar el Proyecto
 
