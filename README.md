@@ -39,6 +39,10 @@ En el archivo "xxx", una vez ejecutado dentro del entorno operativo con Python, 
 
 XXXXXXXXXXXXXXXX
 
+```bash
+   python interface_gradio.py
+```
+
 Es necesario descargar la carpeta de algoritmos y modelos de Diffusion para realizar los fine-tunings si se desea. A continuación, dejo el comando y la carpeta de almacenamiento en el proyecto:
 
 XXXXXXXXXXXXXXXX
