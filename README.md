@@ -43,7 +43,7 @@ Es necesario descargar la carpeta de algoritmos y modelos de Diffusion para real
 
 XXXXXXXXXXXXXXXX
 
-Para ejecutar la generación de los principales modelos, siempre es necesario ejecutar el archivo XXX, que ejecuta una interfaz Gradio para realizar los experimentos. Dejo el comando a continuación:
+Para ejecutar la generación de los principales modelos, siempre es necesario ejecutar el archivo XXX, que ejecuta una interfaz Gradio para realizar los experimentos, siempre y cuando ya exista un modelo ajustado en la carpeta. Dejo el comando a continuación:
 
 XXXXXXXXXXXXXXXX
 
@@ -56,6 +56,6 @@ It is necessary to download the folder containing the Diffusion algorithms and m
 
 XXXXXXXXXXXXXXXX
 
-To generate the main models, it is always necessary to run the file XXX, which launches a Gradio interface to conduct the experiments. Below is the command:
+To execute the generation of the main models, it is always necessary to run the XXX file, which launches a Gradio interface to perform the experiments, as long as an adjusted model already exists in the folder. I leave the command below:
 
 XXXXXXXXXXXXXXXX
