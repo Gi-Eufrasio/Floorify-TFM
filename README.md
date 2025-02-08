@@ -42,7 +42,11 @@ En el archivo "install_dependencias_and_modelos.sh", una vez ejecutado dentro de
    ./install_dependencias_and_modelos.sh
 ```
 
-Es necesario descargar la carpeta de algoritmos y modelos de Diffusion para realizar los fine-tunings si se desea, en la cual son todos descargados con el la ejecución del archivo bash "install_dependencias". Para ejecutar cada fine tuning e necessario adetrar en los scripts adentro da carpeta ·Floorify-TFM/Model_Test_Local/Text_to_Image_Testes/Model/Script_Entreinameniento_Fine_Tuning.py". Cada Experimento muda pelo nome de seu modelo, podendo ser entre Dreambooth e LoRas. Com isso fica a criterio do usuario mudar os parametros experimentais dentro do codigo de cada ajuste fino ou inferencias nos modelos ajustados. Abaixo dejo um exemplo dos parametros do experimento de ajsute fino de Text_to_Image:
+Es necesario descargar la carpeta de algoritmos y modelos de Diffusion para realizar los fine-tunings si se desea. Todos estos se descargan automáticamente al ejecutar el archivo bash "install_dependencias". Para ejecutar cada fine-tuning, es necesario acceder a los scripts dentro de la carpeta: 📂 Floorify-TFM/Model_Test_Local/Text_to_Image_Testes/Model/Script_Entrenamiento_Fine_Tuning.py
+
+Cada experimento cambia según el nombre de su modelo, pudiendo ser Dreambooth o LoRAs. Por lo tanto, queda a criterio del usuario modificar los parámetros experimentales dentro del código de cada ajuste fino o de las inferencias en los modelos ajustados.
+
+A continuación, dejo un ejemplo de los parámetros del experimento de ajuste fino de Text_to_Image:
 
 ```python
    command_train  = [
@@ -67,7 +71,7 @@ Es necesario descargar la carpeta de algoritmos y modelos de Diffusion para real
 Para ejecutar la generación de los principales modelos, siempre es necesario ejecutar el archivo XXX, que ejecuta una interfaz Gradio para realizar los experimentos, siempre y cuando ya exista un modelo ajustado en la carpeta. Dejo el comando a continuación:
 
 ```bash
-   python interface_gradio.py
+   python3 interface_gradio.py
 ```
 
 ## Installation and Methods to Use the Project
