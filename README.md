@@ -74,7 +74,7 @@ Para realizar las inferencias, puedes utilizar Gradio, que ya está configurado 
    python3 interface_gradio.py
 ```
 
-El proyecto no incluye, por defecto, un modelo prealmacenado en el método, por lo que es necesario utilizar el modelo base y estándar proporcionado en este proyecto, disponible en el siguiente enlace de Hugging Face: XXXX. 
+El proyecto no incluye, por defecto, un modelo prealmacenado en el método, por lo que es necesario utilizar el modelo base y estándar proporcionado en este proyecto, disponible en el siguiente enlace de Hugging Face: (https://huggingface.co/gigio-br/Experiment_Fine_Tuning_Model_Diffusion_Text_to_Image_Floor_Plan_Project) 
 Otra opción para utilizar un modelo en Gradio es realizar un nuevo fine-tuning, siguiendo las especificaciones definidas en el script de entrenamiento. Este script ya está preparado para ejecutar el ajuste fino y generar un modelo dentro del método text_to_image.
 
 ## Installation and Methods to Use the Project
