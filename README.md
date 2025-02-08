@@ -59,7 +59,7 @@ A continuación, dejo un ejemplo de los parámetros del experimento de ajuste fi
     "--gradient_accumulation_steps", "4",
     "--gradient_checkpointing",
     "--mixed_precision", "fp16",
-    "--max_train_steps", "500",
+    "--max_train_steps", "1500",
     "--learning_rate", "5e-6",
     "--max_grad_norm", "4",
     "--lr_scheduler", "constant", "--lr_warmup_steps", "0",
