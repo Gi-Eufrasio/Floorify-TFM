@@ -35,16 +35,33 @@ For the model's creation, we used the Fine-Tuning technique on pre-trained Stabl
 ## Instalación y Métodos para Utilizar el Proyecto
 
 El proyecto almacenado en este repositorio fue generado a partir del lenguaje de programación Python, convirtiéndose en el requisito principal para cualquier persona que desee realizar pruebas y experimentos con el proyecto.
-En el archivo "xxx", una vez ejecutado dentro del entorno operativo con Python, se instalan automáticamente todas las bibliotecas utilizadas en el proyecto. Dejo el comando a continuación:
+En el archivo "install_dependencias_and_modelos.sh", una vez ejecutado dentro del entorno operativo con Python, se instalan automáticamente todas las bibliotecas utilizadas en el proyecto. Dejo el comando a continuación:
 
 ```bash
-   python interface_gradio.py
+   chmod +x install_dependencias_and_modelos.sh
+   ./install_dependencias_and_modelos.sh
 ```
 
-Es necesario descargar la carpeta de algoritmos y modelos de Diffusion para realizar los fine-tunings si se desea. A continuación, dejo el comando y la carpeta de almacenamiento en el proyecto:
+Es necesario descargar la carpeta de algoritmos y modelos de Diffusion para realizar los fine-tunings si se desea, en la cual son todos descargados con el la ejecución del archivo bash "install_dependencias". Para ejecutar cada fine tuning e necessario adetrar en los scripts adentro da carpeta ·Floorify-TFM/Model_Test_Local/Text_to_Image_Testes/Model/Script_Entreinameniento_Fine_Tuning.py". Cada Experimento muda pelo nome de seu modelo, podendo ser entre Dreambooth e LoRas. Com isso fica a criterio do usuario mudar os parametros experimentais dentro do codigo de cada ajuste fino ou inferencias nos modelos ajustados. Abaixo dejo um exemplo dos parametros do experimento de ajsute fino de Text_to_Image:
 
-```bash
-   python interface_gradio.py
+```python
+   command_train  = [
+    "accelerate", "launch", "../../../default_diffusers_model/diffusers/examples/text_to_image/train_text_to_image.py",
+    "--pretrained_model_name_or_path", model_name,
+    "--train_data_dir", train_dir,
+    "--use_ema",
+    "--resolution", "512", "--center_crop", "--random_flip",
+    "--train_batch_size", "4",
+    "--gradient_accumulation_steps", "4",
+    "--gradient_checkpointing",
+    "--mixed_precision", "fp16",
+    "--max_train_steps", "500",
+    "--learning_rate", "5e-6",
+    "--max_grad_norm", "4",
+    "--lr_scheduler", "constant", "--lr_warmup_steps", "0",
+    "--output_dir", output_dir,
+    "--logging_dir", "output_log1"
+]
 ```
 
 Para ejecutar la generación de los principales modelos, siempre es necesario ejecutar el archivo XXX, que ejecuta una interfaz Gradio para realizar los experimentos, siempre y cuando ya exista un modelo ajustado en la carpeta. Dejo el comando a continuación:
