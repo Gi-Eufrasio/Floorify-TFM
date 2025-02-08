@@ -35,7 +35,7 @@ For the model's creation, we used the Fine-Tuning technique on pre-trained Stabl
 ## Instalación y Métodos para Utilizar el Proyecto
 
 El proyecto almacenado en este repositorio fue generado a partir del lenguaje de programación Python, convirtiéndose en el requisito principal para cualquier persona que desee realizar pruebas y experimentos con el proyecto.
-En el archivo "install_dependencias_and_modelos.sh", una vez ejecutado dentro del entorno operativo con Python, se instalan automáticamente todas las bibliotecas utilizadas en el proyecto. Dejo el comando a continuación:
+En el archivo "install_dependencias_and_modelos.sh", una vez ejecutado dentro del entorno operativo con Python, se instalan automáticamente todas las bibliotecas utilizadas en el proyecto, recordando que es necesario tener el proyecto ya bajado localmente y estar dentro del proyecto. Dejo el comando a continuación:
 
 ```bash
    chmod +x install_dependencias_and_modelos.sh
