@@ -3,7 +3,7 @@ from diffusers import StableDiffusionPipeline
 import torch
 
 # Load the trained model for inference
-output_dir = "././Model_Test_Local/Text_to_Image_Testes/Model/My_Model_Trained"
+output_dir = ".././Model_Test_Local/Text_to_Image_Testes/Model/My_Model_Trained"
 pipeline = StableDiffusionPipeline.from_pretrained(output_dir, torch_dtype=torch.float16).to("cuda")
 
 # Function to generate images
@@ -28,7 +28,7 @@ interface = gr.Interface(
         gr.Slider(minimum=10, maximum=100, step=10, value=50, label="Numero de pasos")
     ],
     outputs=[gr.Image(type="pil", label=f"Imagen {i+1}") for i in range(4)],
-    title="Generador de Planos - Florify",
+    title="Generador de Planos - Floorify",
     description="Ingrese un mensaje de texto y el modelo generará cuatro imágenes basadas en él."
 )
 

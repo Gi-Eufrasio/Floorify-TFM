@@ -15,7 +15,7 @@ from datasets import Dataset as HFDataset, DatasetDict, Features, Value, Array3D
 
 # Create Hugging Face CLI login command
 
-huggingface_hub_token = "XXXX" #Token to Hugging Face
+huggingface_hub_token = "XXX" #Token to Hugging Face
 os.environ["HUGGINGFACE_HUB_TOKEN"] = huggingface_hub_token
 command_HugginFace_login = ["huggingface-cli", "login", "--token", huggingface_hub_token, "--add-to-git-credential"]
 subprocess.run(command_HugginFace_login)
@@ -26,18 +26,18 @@ output_dir = "My_Model_Trained"
 # Build the command
 
 command_train  = [
-    "accelerate", "launch", "../../default_diffusers_model/diffusers/examples/text_to_image/train_text_to_image.py",
+    "accelerate", "launch", "../../../default_diffusers_model/diffusers/examples/text_to_image/train_text_to_image.py",
     "--pretrained_model_name_or_path", model_name,
     "--train_data_dir", train_dir,
     "--use_ema",
     "--resolution", "512", "--center_crop", "--random_flip",
-    "--train_batch_size", "4",
-    "--gradient_accumulation_steps", "4",
+    "--train_batch_size", "2",
+    "--gradient_accumulation_steps", "2",
     "--gradient_checkpointing",
     "--mixed_precision", "fp16",
-    "--max_train_steps", "1500",
+    "--max_train_steps", "500",
     "--learning_rate", "5e-6",
-    "--max_grad_norm", "4",
+    "--max_grad_norm", "2",
     "--lr_scheduler", "constant", "--lr_warmup_steps", "0",
     "--output_dir", output_dir,
     "--logging_dir", "output_log1"
