@@ -13,7 +13,7 @@ wandb.init(project="dreambooth-lora", entity="giovaneeufrasio")
 
 # Define the training command
 command_train = [
-    "accelerate", "launch", "/home/data/giovan/testes/Dreambooth/Model/diffusers/examples/dreambooth/train_dreambooth_lora.py",
+    "accelerate", "launch", "../../../default_diffusers_model/diffusers/examples/dreambooth/train_dreambooth_lora.py",
     "--pretrained_model_name_or_path=runwayml/stable-diffusion-v1-5",
     "--instance_data_dir=/home/data/giovan/testes/LoRas/Model/Dataset",
     "--output_dir=/home/data/giovan/testes/LoRas/Model/Model_Test",

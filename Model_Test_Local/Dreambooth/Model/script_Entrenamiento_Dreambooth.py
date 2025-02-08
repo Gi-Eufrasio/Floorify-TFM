@@ -22,17 +22,17 @@ def resize_images(input_dir, output_dir, size=(512, 512)):
             img.save(output_path)
             print(f"Resized and saved {filename} to {output_path}")
 
-input_directory = "/home/tfe/tfm/giovan/data/testes/Dreambooth/Model/Floor_Plan_2D_Dataset"
-output_directory = "/home/tfe/tfm/giovan/data/testes/Dreambooth/Model/Floor_Plan_2D_Dataset/Floor_Plan_2D_Dataset_Resize"
+input_directory = "./Floor_Plan_2D_Dataset"
+output_directory = "./Floor_Plan_2D_Dataset/Floor_Plan_2D_Dataset_Resize"
 
 
 resize_images(input_directory, output_directory, size=(512, 512))
 
 
 command = [
-        "accelerate", "launch", "/home/tfe/tfm/giovan/data/testes/Dreambooth/Model/diffusers/examples/dreambooth/train_dreambooth.py",
+        "accelerate", "launch", "../../../default_diffusers_model/diffusers/examples/dreambooth/train_dreambooth.py",
         "--pretrained_model_name_or_path=CompVis/stable-diffusion-v1-4",
-        "--instance_data_dir=/home/tfe/tfm/giovan/data/testes/Dreambooth/Model/Floor_Plan_2D_Dataset/Floor_Plan_2D_Dataset_Resize",
+        "--instance_data_dir=./Floor_Plan_2D_Dataset/Floor_Plan_2D_Dataset_Resize",
         "--output_dir=/home/tfe/tfm/giovan/data/testes/Dreambooth/Model/My_Model_Trained",
         "--instance_prompt=Floor Plan 2D",
         "--resolution=512",
