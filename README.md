@@ -75,24 +75,59 @@ Para realizar las inferencias, puedes utilizar Gradio, que ya está configurado 
 ```
 
 El proyecto no incluye, por defecto, un modelo prealmacenado en el método, por lo que es necesario utilizar el modelo base y estándar proporcionado en este proyecto, disponible en el siguiente enlace de Hugging Face: (https://huggingface.co/gigio-br/Experiment_Fine_Tuning_Model_Diffusion_Text_to_Image_Floor_Plan_Project) 
+
 Otra opción para utilizar un modelo en Gradio es realizar un nuevo fine-tuning, siguiendo las especificaciones definidas en el script de entrenamiento. Este script ya está preparado para ejecutar el ajuste fino y generar un modelo dentro del método text_to_image.
 
 ## Installation and Methods to Use the Project
 
-The project stored in this repository was developed using the Python programming language, making it the primary requirement for anyone wishing to conduct tests and experiments with the project.
-In the file "xxx," once executed within the Python environment, all libraries used in the project are automatically installed.
+The project stored in this repository was developed using the Python programming language, making it a key requirement for anyone who wishes to conduct tests and experiments with this project.
 
-It is necessary to download the folder containing the Diffusion algorithms and models to perform fine-tunings if desired. Below, I provide the command and the storage folder in the project:
-
-```bash
-   python interface_gradio.py
-```
-
-To execute the generation of the main models, it is always necessary to run the XXX file, which launches a Gradio interface to perform the experiments, as long as an adjusted model already exists in the folder. I leave the command below:
+In the "install_dependencias_and_modelos.sh" file, once executed in a Python-compatible operating environment, all the libraries used in the project are automatically installed. It is important to note that the project must already be downloaded locally, and you must be inside the project directory. Below is the command to execute it:
 
 ```bash
-   python interface_gradio.py
+   chmod +x install_dependencias_and_modelos.sh
+   ./install_dependencias_and_modelos.sh
 ```
+
+It is necessary to download the Diffusion algorithms and model folder to perform fine-tunings if desired. These are all automatically downloaded when executing the bash script "install_dependencias". To run each fine-tuning, you need to access the scripts inside the following directory: 📂 Floorify-TFM/Model_Test_Local/Text_to_Image_Testes/Model/Script_Entrenamiento_Fine_Tuning.py
+
+Each experiment varies based on the model name, which can be either Dreambooth or LoRAs. Therefore, the user is responsible for modifying the experimental parameters within the script, whether for fine-tuning or inference on the trained models.
+
+Below is an example of the fine-tuning parameters for Text_to_Image:
+
+```python
+      command_train  = [
+    "accelerate", "launch", "../../../default_diffusers_model/diffusers/examples/text_to_image/train_text_to_image.py",
+    "--pretrained_model_name_or_path", model_name,
+    "--train_data_dir", train_dir,
+    "--use_ema",
+    "--resolution", "512", "--center_crop", "--random_flip",
+    "--train_batch_size", "4",
+    "--gradient_accumulation_steps", "4",
+    "--gradient_checkpointing",
+    "--mixed_precision", "fp16",
+    "--max_train_steps", "1500",
+    "--learning_rate", "5e-6",
+    "--max_grad_norm", "4",
+    "--lr_scheduler", "constant", "--lr_warmup_steps", "0",
+    "--output_dir", output_dir,
+    "--logging_dir", "output_log1"
+]
+```
+
+To perform inferences, you can use Gradio, which is already configured to run inferences on fine-tuned models within the text_to_image method.
+
+It is important to note that, for this process, the fine-tuned model must be located inside the text_to_image_testes directory, as mentioned earlier in the fine-tuning process.
+
+The following command allows you to run the Gradio interface for performing inferences:
+
+```bash
+   python3 interface_gradio.py
+```
+
+By default, the project does not include a pre-stored model in the method. Therefore, it is necessary to use the default and standard model provided in this project, available at the following Hugging Face link: (https://huggingface.co/gigio-br/Experiment_Fine_Tuning_Model_Diffusion_Text_to_Image_Floor_Plan_Project) 
+
+Another option to use a model in Gradio is to perform a new fine-tuning, following the specifications defined in the training script. This script is already prepared to execute the fine-tuning process and generate a model within the text_to_image method.
 
 ## Citation
 
