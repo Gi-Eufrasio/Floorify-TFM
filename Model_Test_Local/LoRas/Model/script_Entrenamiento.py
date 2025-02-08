@@ -3,7 +3,7 @@ import os
 import wandb
 
 # Build Hugging Face CLI login command
-huggingface_hub_token = "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"
+huggingface_hub_token = "XXX" #Token to Hugging Face
 os.environ["HUGGINGFACE_HUB_TOKEN"] = huggingface_hub_token
 command_HugginFace_login = ["huggingface-cli", "login", "--token", huggingface_hub_token, "--add-to-git-credential"]
 subprocess.run(command_HugginFace_login)

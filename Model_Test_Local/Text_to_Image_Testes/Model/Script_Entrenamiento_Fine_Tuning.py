@@ -1,32 +1,33 @@
-import subprocess
 import os
-from datasets import load_dataset
-from PIL import Image
-from torchvision import transforms
-import datasets
-import torch
-from torch.utils.data import DataLoader, Dataset
-from torchvision.datasets import ImageFolder
 import glob
-from datasets import Dataset as HFDataset, DatasetDict, Features, Value, Array3D
+import torch
+import datasets
+import subprocess
 import pandas as pd
+from PIL import Image
 from datasets import load_dataset
+from torchvision import transforms
+from torchvision.datasets import ImageFolder
+from torch.utils.data import DataLoader, Dataset
+from datasets import Dataset as HFDataset, DatasetDict, Features, Value, Array3D
 
-# Métodos de aplicación de ajuste fino en difusión estable
+# Fine-tuning application methods in stable broadcast
 
-# Crear comando de inicio de sesión CLI de Hugging Face
-huggingface_hub_token = "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"
+# Create Hugging Face CLI login command
+
+huggingface_hub_token = "XXXX" #Token to Hugging Face
 os.environ["HUGGINGFACE_HUB_TOKEN"] = huggingface_hub_token
 command_HugginFace_login = ["huggingface-cli", "login", "--token", huggingface_hub_token, "--add-to-git-credential"]
 subprocess.run(command_HugginFace_login)
 
 model_name = "runwayml/stable-diffusion-v1-5"  
-train_dir = "/home/data/giovan/testes/Text_to_Image_Testes/Model/Dataset_Resize_Cubi_Casa_5K/train/Floor_Plan_Imagenes"
+train_dir = "./Dataset_Resize_Cubi_Casa_5K/train/Floor_Plan_Imagenes"
 output_dir = "My_Model_Trained" 
 
 # Build the command
+
 command_train  = [
-    "accelerate", "launch", "/home/data/giovan/testes/Dreambooth/Model/diffusers/examples/text_to_image/train_text_to_image.py",
+    "accelerate", "launch", "../../default_diffusers_model/diffusers/examples/text_to_image/train_text_to_image.py",
     "--pretrained_model_name_or_path", model_name,
     "--train_data_dir", train_dir,
     "--use_ema",

@@ -2,11 +2,11 @@ import gradio as gr
 from diffusers import StableDiffusionPipeline
 import torch
 
-# Cargar el modelo entrenado para inferencia
-output_dir = "./Model_Test_Local/Text_to_Image_Testes/Model/My_Model_Trained_1"
+# Load the trained model for inference
+output_dir = "././Model_Test_Local/Text_to_Image_Testes/Model/My_Model_Trained"
 pipeline = StableDiffusionPipeline.from_pretrained(output_dir, torch_dtype=torch.float16).to("cuda")
 
-# Función para generar imágenes
+# Function to generate images
 def generate_images(prompt, width, height, num_steps, num_images=4):
     images = []
     for _ in range(num_images):
@@ -18,7 +18,7 @@ def generate_images(prompt, width, height, num_steps, num_images=4):
         images.append(image)
     return images
 
-# Interfaz Gradio para generar imágenes.
+# Gradio interface for generating images.
 interface = gr.Interface(
     fn=generate_images,
     inputs=[
@@ -32,5 +32,5 @@ interface = gr.Interface(
     description="Ingrese un mensaje de texto y el modelo generará cuatro imágenes basadas en él."
 )
 
-# Iniciar la interfaz
+# Start the interface
 interface.launch()
