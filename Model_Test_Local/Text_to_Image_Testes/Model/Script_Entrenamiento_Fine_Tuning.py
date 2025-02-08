@@ -19,7 +19,6 @@ huggingface_hub_token = "XXXX" #Token to Hugging Face
 os.environ["HUGGINGFACE_HUB_TOKEN"] = huggingface_hub_token
 command_HugginFace_login = ["huggingface-cli", "login", "--token", huggingface_hub_token, "--add-to-git-credential"]
 subprocess.run(command_HugginFace_login)
-#
 model_name = "runwayml/stable-diffusion-v1-5"  
 train_dir = "./Dataset_Resize_Cubi_Casa_5K/train/Floor_Plan_Imagenes"
 output_dir = "My_Model_Trained" 
