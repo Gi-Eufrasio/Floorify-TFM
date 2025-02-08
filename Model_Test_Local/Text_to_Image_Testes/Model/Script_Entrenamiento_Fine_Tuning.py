@@ -35,7 +35,7 @@ command_train  = [
     "--gradient_accumulation_steps", "2",
     "--gradient_checkpointing",
     "--mixed_precision", "fp16",
-    "--max_train_steps", "500",
+    "--max_train_steps", "1500",
     "--learning_rate", "5e-6",
     "--max_grad_norm", "2",
     "--lr_scheduler", "constant", "--lr_warmup_steps", "0",
