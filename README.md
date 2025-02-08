@@ -46,6 +46,12 @@ Es necesario descargar la carpeta de algoritmos y modelos de Diffusion para real
 
 Cada experimento cambia según el nombre de su modelo, pudiendo ser Dreambooth o LoRAs. Por lo tanto, queda a criterio del usuario modificar los parámetros experimentales dentro del código de cada ajuste fino o de las inferencias en los modelos ajustados.
 
+Para poder realizar los fine-tunings, es necesario proporcionar tu token de Hugging Face, permitiendo que el script acceda a tus credenciales y realice el ajuste fino del modelo deseado de manera más segura. El comando que debe ser reemplazado en los métodos, en la cual siempre se encuentra en los scripts de entrenamiento. A continuación, se muestra un ejemplo:
+
+```python
+huggingface_hub_token = "XXX" #Token to Hugging Face
+```
+
 A continuación, dejo un ejemplo de los parámetros del experimento de ajuste fino de Text_to_Image:
 
 ```python
@@ -92,6 +98,12 @@ In the "install_dependencias_and_modelos.sh" file, once executed in a Python-com
 It is necessary to download the Diffusion algorithms and model folder to perform fine-tunings if desired. These are all automatically downloaded when executing the bash script "install_dependencias". To run each fine-tuning, you need to access the scripts inside the following directory: 📂 Floorify-TFM/Model_Test_Local/Text_to_Image_Testes/Model/Script_Entrenamiento_Fine_Tuning.py
 
 Each experiment varies based on the model name, which can be either Dreambooth or LoRAs. Therefore, the user is responsible for modifying the experimental parameters within the script, whether for fine-tuning or inference on the trained models.
+
+To perform fine-tunings, you must provide your Hugging Face token, allowing the script to access your credentials and securely fine-tune the desired model. The command that needs to be replaced within the methods is always located in the training scripts. Below is an example:
+
+```python
+huggingface_hub_token = "XXX" #Token to Hugging Face
+```
 
 Below is an example of the fine-tuning parameters for Text_to_Image:
 
