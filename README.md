@@ -68,11 +68,14 @@ A continuación, dejo un ejemplo de los parámetros del experimento de ajuste fi
 ]
 ```
 
-Para ejecutar la generación de los principales modelos, siempre es necesario ejecutar el archivo XXX, que ejecuta una interfaz Gradio para realizar los experimentos, siempre y cuando ya exista un modelo ajustado en la carpeta. Dejo el comando a continuación:
+Para realizar las inferencias, puedes utilizar Gradio, que ya está configurado para ejecutar inferencias en modelos ajustados dentro del método text_to_image. Es importante recordar que, para esta acción, el modelo ajustado debe estar ubicado dentro de las carpetas del método text_to_image_testes, como se mencionó anteriormente en el proceso de fine-tuning. El siguiente comando permite ejecutar la interfaz de Gradio para realizar las inferencias:
 
 ```bash
    python3 interface_gradio.py
 ```
+
+El proyecto no incluye, por defecto, un modelo prealmacenado en el método, por lo que es necesario utilizar el modelo base y estándar proporcionado en este proyecto, disponible en el siguiente enlace de Hugging Face: XXXX. 
+Otra opción para utilizar un modelo en Gradio es realizar un nuevo fine-tuning, siguiendo las especificaciones definidas en el script de entrenamiento. Este script ya está preparado para ejecutar el ajuste fino y generar un modelo dentro del método text_to_image.
 
 ## Installation and Methods to Use the Project
 
