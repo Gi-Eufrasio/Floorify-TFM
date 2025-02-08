@@ -30,6 +30,7 @@ pip install .
 # Install additional packages
 pip install 'diffusers[training]' accelerate datasets
 pip install torchvision
+pip install gradio
 
 # Make the script executable automatically
 chmod +x "$0"
