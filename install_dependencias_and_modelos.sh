@@ -5,7 +5,7 @@ set -e
 
 # Create directory for the Diffusers model
 mkdir -p default_diffusers_model
-mkdir -p Model_Test_Local\Text_to_Image_Testes\Model\My_Model_Trained
+#mkdir -p Model_Test_Local/Text_to_Image_Testes/Model/My_Model_Trained
 
 cd default_diffusers_model
 

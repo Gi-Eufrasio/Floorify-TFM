@@ -3,7 +3,7 @@ import torch
 from PIL import Image
 
 # Load the pipeline with the trained model
-pipeline = StableDiffusionPipeline.from_pretrained("My_Model_Trained", torch_dtype=torch.float16, use_safetensors=True).to("cuda")
+pipeline = StableDiffusionPipeline.from_pretrained("Experiment_Fine_Tuning_Model_Diffusion_Text_to_Image_Floor_Plan_Project", torch_dtype=torch.float16, use_safetensors=True).to("cuda")
 
 # Set the message
 prompt = "Floor Plan 2D, 2 Bedroom, 1 Kitchen, 2 Bathroom, 1 Living room"

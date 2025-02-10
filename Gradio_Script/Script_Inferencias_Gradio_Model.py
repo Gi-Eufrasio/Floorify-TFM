@@ -1,9 +1,9 @@
+import torch
 import gradio as gr
 from diffusers import StableDiffusionPipeline
-import torch
 
 # Load the trained model for inference
-output_dir = ".././Model_Test_Local/Text_to_Image_Testes/Model/My_Model_Trained"
+output_dir = ".././Model_Test_Local/Text_to_Image_Testes/Model/Experiment_Fine_Tuning_Model_Diffusion_Text_to_Image_Floor_Plan_Project"
 pipeline = StableDiffusionPipeline.from_pretrained(output_dir, torch_dtype=torch.float16).to("cuda")
 
 # Function to generate images

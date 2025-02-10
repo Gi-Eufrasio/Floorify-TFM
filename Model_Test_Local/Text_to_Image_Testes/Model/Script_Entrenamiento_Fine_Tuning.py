@@ -21,7 +21,7 @@ command_HugginFace_login = ["huggingface-cli", "login", "--token", huggingface_h
 subprocess.run(command_HugginFace_login)
 model_name = "runwayml/stable-diffusion-v1-5"  
 train_dir = "./Dataset_Resize_Cubi_Casa_5K/train/Floor_Plan_Imagenes"
-output_dir = "My_Model_Trained" 
+output_dir = "Experiment_Fine_Tuning_Model_Diffusion_Text_to_Image_Floor_Plan_Project" 
 
 # Build the command
 
@@ -31,13 +31,13 @@ command_train  = [
     "--train_data_dir", train_dir,
     "--use_ema",
     "--resolution", "512", "--center_crop", "--random_flip",
-    "--train_batch_size", "2",
-    "--gradient_accumulation_steps", "2",
+    "--train_batch_size", "4",
+    "--gradient_accumulation_steps", "4",
     "--gradient_checkpointing",
     "--mixed_precision", "fp16",
     "--max_train_steps", "1500",
     "--learning_rate", "5e-6",
-    "--max_grad_norm", "2",
+    "--max_grad_norm", "4",
     "--lr_scheduler", "constant", "--lr_warmup_steps", "0",
     "--output_dir", output_dir,
     "--logging_dir", "output_log1"
