@@ -1,0 +1,6 @@
+
+--- Parametrizacion + Inferencias ---
+
+- prompt = "Floor Plan 2D, Many Details, Image of white background"
+- negative_prompt = 'low quality, bad quality, sketches'
+- Model : "stabilityai/stable-diffusion-xl-base-1.0"
