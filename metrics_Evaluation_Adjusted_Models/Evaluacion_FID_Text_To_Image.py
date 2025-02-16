@@ -4,8 +4,8 @@ from pytorch_fid import fid_score
 
 def main():
     # Define the paths to the folders containing the reference and generated images
-    real_images_path = "path"
-    fake_images_path = "path"
+    real_images_path = "./FID_for_assessment/Imagenes_Testes_Reais/Imagen_id_1138.jpg"
+    fake_images_path = "./FID_for_assessment/Imagenes_Pruebas/outputTeste1.png"
 
     # Calculate the FID score
     fid_value = fid_score.calculate_fid_given_paths(

@@ -7,7 +7,7 @@ model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
 processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
 # Load an image and a phrase
-image = Image.open("path")
+image = Image.open("./Dreambooth_Tests_for_assessment/generated_image_0.png")
 texts = ["Floor Plan 2D"]
 
 # Preprocess the image and text

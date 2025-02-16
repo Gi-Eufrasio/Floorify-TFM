@@ -10,7 +10,7 @@ Test_01_LoRa_Files = [
     "media_images_test_500_3275dc8faae9438ad8b7.png", 
     "media_images_test_500_cf7e41fa7ca7572e8de9.png"
 ]
-Test_01_LoRa_Path = "path"
+Test_01_LoRa_Path = "./LoRas_Tests_for_assessment/Teste_01"
 
 # List of test images for Test 02 - LoRa
 Test_02_LoRa_Files = [
@@ -20,7 +20,7 @@ Test_02_LoRa_Files = [
     "media_images_test_500_57a716310d3c78cd4acc.png", 
     "media_images_test_500_b2dc980e87a29e4c1b42.png"
 ]
-Test_02_LoRa_Path = "path"
+Test_02_LoRa_Path = "./LoRas_Tests_for_assessment/Teste_02"
 
 # Complete paths for Test 01 images
 Complete_Files_Test_1 = [os.path.join(Test_01_LoRa_Path, file) for file in Test_01_LoRa_Files]

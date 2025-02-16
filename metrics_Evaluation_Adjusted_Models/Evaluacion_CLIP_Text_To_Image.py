@@ -3,16 +3,16 @@ from PIL import Image
 import torch
 import os
 
-Test_01_LoRa_Files = ["output_Test_1.png", "output_Test_2.png", "output_Test_3.png", "output_Test_4.png"]
-Path_Test_01_LoRa = "path"
+Test_01_Files = ["output_Test_1.png", "output_Test_2.png", "output_Test_3.png", "output_Test_4.png"]
+Path_Test_01_LoRa = "./Text_to_Image_Tests_for_assessment/Text_to_Image_Testes/Model_1/Prompt_1/"
 
-Test_02_LoRa_Files = ["output_Test_1.png", "output_Test_2.png", "output_Test_3.png", "output_Test_4.png"]
-Path_Test_02_LoRa = "path"
+Test_02_Files = ["output_Test_1.png", "output_Test_3.png", "output_Test_4.png"]
+Path_Test_02_LoRa = "./Text_to_Image_Tests_for_assessment/Text_to_Image_Testes/Model_1/Prompt_2/"
 
-Complete_Files_Test_1 = [os.path.join(Path_Test_01_LoRa, file) for file in Test_01_LoRa_Files]
+Complete_Files_Test_1 = [os.path.join(Path_Test_01_LoRa, file) for file in Test_01_Files]
 Image_Counter_Test_1 = int(0)
 
-Complete_Files_Test_2 = [os.path.join(Path_Test_02_LoRa, file) for file in Test_02_LoRa_Files]
+Complete_Files_Test_2 = [os.path.join(Path_Test_02_LoRa, file) for file in Test_02_Files]
 Image_Counter_Test_2 = int(0)
 
 for Open_Files in Complete_Files_Test_1: 

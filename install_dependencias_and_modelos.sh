@@ -33,6 +33,8 @@ pip install .
 pip install 'diffusers[training]' accelerate datasets
 pip install torchvision
 pip install gradio
+pip install pillow
+pip install pytorch-fid
 
 apt-get install zip
 
