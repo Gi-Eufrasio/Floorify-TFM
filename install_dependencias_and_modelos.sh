@@ -35,6 +35,8 @@ pip install torchvision
 pip install gradio
 pip install pillow
 pip install pytorch-fid
+pip install subprocess.run
+pip install paddleocr
 
 apt-get install zip
 
